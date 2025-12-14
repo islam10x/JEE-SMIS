@@ -1,0 +1,9 @@
+# MySQL Database Configuration for Docker
+MYSQL_ROOT_PASSWORD=rootpassword
+MYSQL_DATABASE=smis
+MYSQL_USER=smis_user
+MYSQL_PASSWORD=smis_password
+
+# Optional: Override default MySQL settings
+MYSQL_PORT=3306
+MYSQL_DATA_PATH=./mysql/data

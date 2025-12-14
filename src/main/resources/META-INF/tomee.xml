@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tomee>
+    <!-- MySQL DataSource Configuration for SMIS -->
+    <Resource id="SmisDS" type="javax.sql.DataSource">
+        JdbcDriver com.mysql.cj.jdbc.Driver
+        JdbcUrl jdbc:mysql://localhost:3308/smis?useSSL=false&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true
+        UserName smis_user
+        Password smis_password
+        JtaManaged true
+        DefaultAutoCommit false
+
+        <!-- Connection Pool Settings -->
+        MaxActive 20
+        MaxIdle 10
+        MinIdle 5
+        MaxWait 10000
+        ValidationQuery SELECT 1
+        TestOnBorrow true
+        TestOnReturn false
+        TestWhileIdle true
+        TimeBetweenEvictionRunsMillis 30000
+        MinEvictableIdleTimeMillis 60000
+    </Resource>
+</tomee>
